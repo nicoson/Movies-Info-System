@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+</head>
+<body ng-app="movieMgr">
+	<header>
+		<h1><%= title %></h1>
+		<h4>A simple sample built by NodeJS + AngularJS</h4>
+		<hr />
+		<br />
+	</header>
+
+	<section>
+		<div class="container well">
+			<form class="form-horizontal" method="GET">
+				<div class="form-group">
+					<label for="email" class="col-sm-2 control-label">Movie Title:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" id="email" ng-model="title" placeholder="your movie title">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="year" class="col-sm-2 control-label">year:</label>
+					<div class="col-sm-3">
+						<input type="text" class="form-control" id="year" ng-model="year" placeholder="year">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="type" class="col-sm-2 control-label">type:</label>
+					<div class="col-sm-3">
+						<select name="type" id="type" class="selectpicker show-tick" data-size="5" ng-model="type">
+							<option></option>
+							<option value="Erotic">Erotic</option>
+							<option value="Comedy">Comedy</option>
+							<option value="Action">Action</option>
+						</select>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+		
+		<div id="result" class="container well" ng-controller="movieCtr">
+			<div class="row" ng-repeat="film in films|filter: year|filter: title|filter: type">
+				<div class="col-sm-2">
+					<img src="{{film.imgURL}}" alt="" />
+				</div>
+				<div class="col-sm-8">
+					<ul>
+						<li><h3>{{film.movieTitle}}</h3></li>
+						<li><b>Release Date: </b>{{film.ReleaseDate}}</li>
+						<li><b>Director: </b>{{film.Director}}</li>
+						<li>{{film.introduce}}</li>
+					</ul>
+				</div>
+				<div class="col-sm-1">{{film.type}}</div>
+				<div class="col-sm-1">{{film.year}}</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<hr />
+		<br>
+		<p>This is a sample by Shawn Ni</p>
+	</footer>
+
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="javascripts/app.js"></script>
+	<script>
+		$('.selectpicker').selectpicker({noneSelectedText:"All"});
+	</script>
+</body>
+</html>

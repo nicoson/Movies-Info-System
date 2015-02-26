@@ -1,0 +1,51 @@
+[
+{
+	"imgURL": "images/m1.jpg",
+	"movieTitle": "Fifty Shades of Grey",
+	"ReleaseDate": "February 13, 2015",
+	"year": "2015",
+	"Director": "Sam Taylor-Johnson",
+	"introduce": "When college senior Anastasia Steele (Dakota Johnson) steps in for her sick roommate to interview prominent businessman Christian Grey (Jamie Dornan) for their campus paper, little does she realize the path her life will take. Christian, as enigmatic as he is rich and powerful, finds himself strangely drawn to Ana, and she to him. Though sexually inexperienced, Ana plunges headlong into an affair -- and learns that Christian's true sexual proclivities push the boundaries of pain and pleasure.",
+	"type": "Erotic"
+},
+
+{
+	"imgURL": "images/m2.jpg",
+	"movieTitle": "Annie",
+	"ReleaseDate": "December 19, 2014 (USA)",
+	"year": "2014",
+	"Director": "Will Gluck",
+	"introduce": "Ever since her parents left her as a baby, little Annie (Quvenzhané Wallis) has led a hard-knock life with her calculating foster mother, Miss Hannigan. However, all that changes when hard-nosed billionaire and mayoral candidate Will Stacks (Jamie Foxx) takes her in on the recommendation of his advisers (Rose Byrne, Bobby Cannavale). Stacks believes that he's Annie's guardian angel, but the plucky youngster's confidence and sunny outlook may mean that Annie will save Will instead.",
+	"type": "Comedy"
+},
+
+{
+	"imgURL": "images/m3.jpg",
+	"movieTitle": "Into the Woods",
+	"ReleaseDate": "December 25, 2014 (USA)",
+	"year": "2014",
+	"Director": "Rob Marshall",
+	"introduce": "As the result of the curse of a once-beautiful witch (Meryl Streep), a baker (James Corden) and his wife (Emily Blunt) are childless. Three days before the rise of a blue moon, they venture into the forest to find the ingredients that will reverse the spell and restore the witch's beauty: a milk-white cow, hair as yellow as corn, a blood-red cape, and a slipper of gold. During their journey, they meet Cinderella, Little Red Riding Hood, Rapunzel and Jack, each one on a quest to fulfill a wish.",
+	"type": "Comedy"
+},
+
+{
+	"imgURL": "images/m4.jpg",
+	"movieTitle": "Kingsman: The Secret Service",
+	"ReleaseDate": "February 13, 2015 (USA)",
+	"year": "2015",
+	"Director": "Matthew Vaughn",
+	"introduce": "Gary 'Eggsy' Unwin (Taron Egerton), whose late father secretly worked for a spy organization, lives in a South London housing estate and seems headed for a life behind bars. However, dapper agent Harry Hart (Colin Firth) recognizes potential in the youth and recruits him to be a trainee in the secret service. Meanwhile, villainous Richmond Valentine (Samuel L. Jackson) launches a diabolical plan to solve the problem of climate change via a worldwide killing spree.",
+	"type": "Action"
+},
+
+{
+	"imgURL": "images/m5.jpg",
+	"movieTitle": "Jupiter Ascending",
+	"ReleaseDate": "February 6, 2015 (USA)",
+	"year": "2015",
+	"Director": "Andy Wachowski, Lana Wachowski",
+	"introduce": "Jupiter Jones (Mila Kunis) was born under signs that predicted future greatness, but her reality as a woman consists of cleaning other people's houses and endless bad breaks. Caine (Channing Tatum), a genetically engineered hunter, arrives on Earth to locate her, making Jupiter finally aware of the great destiny that awaits her: Jupiter's genetic signature marks her as the next in line for an extraordinary inheritance that could alter the balance of the cosmos.",
+	"type": "Action"
+}
+]
