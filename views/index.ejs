@@ -6,21 +6,51 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 </head>
-<body ng-app="movieMgr">
+<body ng-app="movieMgr" ng-controller="movieCtr">
 	<header>
 		<h1><%= title %></h1>
 		<h4>A simple sample built by NodeJS + AngularJS</h4>
-		<hr />
 		<br />
 	</header>
 
+	<nav class="myNav" ng-hide="navCtr">
+		<form class="form-inline">
+			<div class="form-group">
+				<h3>Movie Info System</h3>
+			</div>
+			<div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<div class="form-group" style="top:10px">
+				<label for="exampleInputName2">Movie Title</label>
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="your movie title"
+				ng-model="title">
+			</div>
+			<div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">Year</label>
+				<input type="text" class="form-control" id="exampleInputEmail2" placeholder="year" ng-model="year">
+			</div>
+			<div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<span><b>Type</b></span>
+			<div class="form-group">
+				<div>
+					<select name="type" id="type" class="selectpicker show-tick" data-size="5" ng-model="type">
+						<option></option>
+						<option value="Erotic">Erotic</option>
+						<option value="Comedy">Comedy</option>
+						<option value="Action">Action</option>
+					</select>
+				</div>
+			</div>
+		</form>
+	</nav>
+
 	<section>
-		<div class="container well">
-			<form class="form-horizontal" method="GET">
+		<div id="searchBar" my-dir class="container well" ng-show="navCtr">
+			<form class="form-horizontal">
 				<div class="form-group">
-					<label for="email" class="col-sm-2 control-label">Movie Title:</label>
+					<label for="title" class="col-sm-2 control-label">Movie Title:</label>
 					<div class="col-sm-3">
-						<input type="text" class="form-control" id="email" ng-model="title" placeholder="your movie title">
+						<input type="text" class="form-control" id="title" ng-model="title" placeholder="your movie title">
 					</div>
 				</div>
 				<div class="form-group">
@@ -43,9 +73,7 @@
 			</form>
 		</div>
 
-
-		
-		<div id="result" class="container well" ng-controller="movieCtr">
+		<div id="result" class="container well">
 			<div class="row" ng-repeat="film in films|filter: year|filter: title|filter: type">
 				<div class="col-sm-2">
 					<img src="{{film.imgURL}}" alt="" />
@@ -64,19 +92,19 @@
 		</div>
 	</section>
 
-	<footer>
+	<footer class="container-fluid">
 		<hr />
 		<br>
 		<p>This is a sample by Shawn Ni</p>
 	</footer>
 
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 	<script src="javascripts/app.js"></script>
 	<script>
-		$('.selectpicker').selectpicker({noneSelectedText:"All"});
+	$('.selectpicker').selectpicker({noneSelectedText:"All"});
 	</script>
 </body>
 </html>

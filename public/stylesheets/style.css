@@ -1,7 +1,16 @@
 
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header, section{
+	padding: 50px;
+}
+
+header{
+	background: #6f5499;
+	color: white;
 }
 
 a {
@@ -14,6 +23,13 @@ header>h4 {
 
 footer>p {
 	text-align: center;
+}
+
+footer{
+	width: 100%;
+	Height: 200px;
+	background: #6f5499;
+	color: white;
 }
 
 #result{
@@ -38,4 +54,15 @@ footer>p {
 
 ul{
 	list-style-type: none;
+}
+
+.myNav{
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+	color: white;
+	top: 0;
+	left: 0;
+	background: #6f5499;
+	z-index: 20;
 }
