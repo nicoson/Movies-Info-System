@@ -13,10 +13,17 @@ angular.module("movieMgr", [])
 			var searchBarHeight = ele.offset().top;
 			$(window).on("scroll",function(){				
 				console.log($(this).scrollTop()+":"+searchBarHeight+":"+scope.navCtr);
-				if($(this).scrollTop() > searchBarHeight){
-					scope.navCtr = false;
+				if(scope.navCtr == true){
+					if($(this).scrollTop() > searchBarHeight){
+						$(".myNav").animate({top: "0px"}, 1500);
+						scope.navCtr = false;
+					}
 				}else{
-					scope.navCtr = true;
+					if($(this).scrollTop() < searchBarHeight-100){
+						$(".myNav").animate({top: "-100px"}, 1500);
+						scope.navCtr = true;
+//						setTimeout(function(){scope.navCtr = true; scope.$apply();},1500);
+					}
 				}
 
 				scope.$apply();
